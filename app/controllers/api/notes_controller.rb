@@ -2,7 +2,7 @@ class Api::NotesController < ApplicationController
   before_action :set_note, except: [:index, :create]
 
   def index
-    render json: Note.order(created_at :desc)
+    render json: Note.all
   end
 
   def create
